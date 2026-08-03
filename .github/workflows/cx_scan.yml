@@ -40,6 +40,7 @@ jobs:
           project_name: ${{ github.event.repository.name }}
           branch: ${{ github.head_ref }}
           additional_params: >
+            --scan-types sast
             --sast-incremental
             --report-format markdown
             --scan-info-format json
@@ -59,6 +60,7 @@ jobs:
           project_name: ${{ github.event.repository.name }}
           branch: ${{ github.ref_name }}
           additional_params: >
+            --scan-types sast
             --report-format markdown
             --scan-info-format json
 
